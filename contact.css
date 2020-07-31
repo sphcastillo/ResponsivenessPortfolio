@@ -115,6 +115,11 @@ footer p {
 
     
     }
+    
+    main {
+      
+      height: 940px;
+    }
 
     form {
       width: 76%;

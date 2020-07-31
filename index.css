@@ -121,6 +121,11 @@ footer p {
     display: inline-block;
     }
 
+    main {
+        
+        height: 997px;
+    }
+
     .card {
         margin-top: 0;
     }
