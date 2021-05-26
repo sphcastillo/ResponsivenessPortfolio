@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdFingerprint } from 'react-icons/md';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 function Navbar() {
+
+    const [click, setClick] = useState(false);
+
+    const handleClick = () => setClick(!click)
     return (
         <>
             <div className="navbar">
@@ -12,8 +16,11 @@ function Navbar() {
                         <MdFingerprint className='navbar-icon' />
                         LAVISH
                     </Link>
-                    <div className="menu-icon">
-                    
+                    <div 
+                        className="menu-icon" 
+                        onClick={handleClick}
+                    >
+                        {click ? <FaTimes /> : <FaBars />}
                     </div>
                 </div>
             </div>
